@@ -11,6 +11,8 @@ namespace APIsAndJSON
     {
         static void Main(string[] args)
         {
+            #region RonVSKanye
+            /*
             var client = new HttpClient();
             var quote = new RonVSKanyeAPI(client);
 
@@ -21,6 +23,13 @@ namespace APIsAndJSON
                 Console.WriteLine();
                 Console.WriteLine($"Ron Swanson: {quote.RonSwanson()}");
             }
+            */
+            #endregion
+
+            var client = new HttpClient();
+            var weather = new OpenWeatherMapAPI(client);
+
+            weather.getWeather();
         }
     }
 }
