@@ -39,11 +39,11 @@ namespace APIsAndJSON
             double windSpeed = Convert.ToDouble(data["wind"]["speed"]);
 
             Console.WriteLine($"Current weather in {cityName}:");
-            Console.WriteLine($"  - Weather: {weather}");
-            Console.WriteLine($"  - Temperature: {temp}°F");
-            Console.WriteLine($"  - Feels Like: {feelsLike}°F");
-            Console.WriteLine($"  - Humidity: {humidity}%");
-            Console.WriteLine($"  - Wind Speed: {windSpeed} mph");
+            Console.WriteLine($" - Weather: {weather}");
+            Console.WriteLine($" - Temperature: {temp}°F");
+            Console.WriteLine($" - Feels Like: {feelsLike}°F");
+            Console.WriteLine($" - Humidity: {humidity}%");
+            Console.WriteLine($" - Wind Speed: {windSpeed} mph");
         }
     }
 }

@@ -26,10 +26,12 @@ namespace APIsAndJSON
             */
             #endregion
 
+            #region OpenWeather
             var client = new HttpClient();
             var weather = new OpenWeatherMapAPI(client);
 
-            weather.getWeather();
+            weather.getWeather().GetAwaiter().GetResult();
+            #endregion
         }
     }
 }
