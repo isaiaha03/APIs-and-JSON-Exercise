@@ -12,7 +12,7 @@ namespace APIsAndJSON
     public class OpenWeatherMapAPI
     {
         private HttpClient _client;
-        private static readonly string apiKey = "2d6ddb86014eda3ba435b286931ad234";
+        private static readonly string apiKey = "";
         static string city = "houston";
         static string state = "tx";
         static string country = "us";
