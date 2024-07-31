@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Formats.Asn1;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,8 +12,12 @@ namespace APIsAndJSON
 {
     public class OpenWeatherMapAPI
     {
+        private static string jsonFile = "appsettings.json";
+        private static string jsonString = File.ReadAllText(jsonFile);
+        private static JObject config = JObject.Parse(jsonString);
+
         private HttpClient _client;
-        private static readonly string apiKey = "";
+        private static readonly string apiKey = config["ApiSettings"]?["ApiKey"]?.ToString() ?? "ApiKeyNotFound";
         static string city = "houston";
         static string state = "tx";
         static string country = "us";
